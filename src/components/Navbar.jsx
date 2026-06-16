@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { COMPANY, phoneLink } from '../constants.js'
+import logo from "../assets/logo.png";
 
 const LINKS = [
   { href: '#home', label: 'Home' },
@@ -25,7 +26,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <a href="#home" className="navbar__brand" onClick={() => setOpen(false)}>
-          <img src="./assets/logo.png" alt={`${COMPANY.name} logo`} className="navbar__logo" />
+          <img src={logo} alt={`${COMPANY.name} logo`} className="navbar__logo" />
           <span className="navbar__brand-text">
             <strong>Suvidha</strong>
             <small>Relocation Services</small>
