@@ -28,7 +28,7 @@ export default function Navbar() {
         <a href="#home" className="navbar__brand" onClick={() => setOpen(false)}>
           <img src={logo} alt={`${COMPANY.name} logo`} className="navbar__logo" />
           <span className="navbar__brand-text">
-            <strong>Suvidhaj</strong>
+            <strong>Suvidha</strong>
             <small>Relocation Services</small>
           </span>
         </a>
