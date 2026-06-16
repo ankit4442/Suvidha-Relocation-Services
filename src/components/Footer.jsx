@@ -1,0 +1,54 @@
+import { COMPANY, phoneLink } from '../constants.js'
+
+export default function Footer() {
+  const year = new Date().getFullYear()
+
+  return (
+    <footer className="footer">
+      <div className="container footer__grid">
+        <div className="footer__brand">
+          <div className="footer__brand-top">
+            <img src="./assets/logo.png" alt={`${COMPANY.name} logo`} />
+            <span>
+              <strong>Suvidha</strong>
+              <small>Relocation Services</small>
+            </span>
+          </div>
+          <p>
+            Your trusted partner for safe, affordable and on-time packing and
+            moving services across India.
+          </p>
+        </div>
+
+        <div className="footer__col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div className="footer__col">
+          <h4>Our Services</h4>
+          <a href="#services">Home Relocation</a>
+          <a href="#services">Office Relocation</a>
+          <a href="#services">Car &amp; Bike Transport</a>
+          <a href="#services">Warehousing</a>
+        </div>
+
+        <div className="footer__col">
+          <h4>Contact</h4>
+          <a href={`tel:${phoneLink(COMPANY.phonePrimary)}`}>{COMPANY.phonePrimary}</a>
+          <a href={`tel:${phoneLink(COMPANY.phoneSecondary)}`}>{COMPANY.phoneSecondary}</a>
+          <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>
+        </div>
+      </div>
+
+      <div className="footer__bottom">
+        <div className="container">
+          © {year} {COMPANY.name}. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  )
+}
