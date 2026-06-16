@@ -1,4 +1,5 @@
 import { COMPANY, phoneLink } from '../constants.js'
+import logo from "../../assets/logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <div className="footer__brand-top">
-            <img src="./assets/logo.png" alt={`${COMPANY.name} logo`} />
+            <img src={logo} alt={`${COMPANY.name} logo`} />
             <span>
               <strong>Suvidha</strong>
               <small>Relocation Services</small>
