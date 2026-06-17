@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { COMPANY, phoneLink } from '../constants.js'
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logoimage.jpeg";
 
 const LINKS = [
   { href: '#home', label: 'Home' },
