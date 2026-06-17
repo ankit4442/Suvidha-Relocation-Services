@@ -10,8 +10,8 @@ const REVIEWS = [
     text: 'Very professional and affordable. They handled my office relocation smoothly with zero downtime. Highly recommended.',
   },
   {
-    name: 'Amit Singh',
-    place: 'Mohali',
+    name: 'Sachin Thakur',
+    place: 'Jammu',
     text: 'Suvidha made my home shifting completely stress-free. Polite staff and honest pricing. Will use them again.',
   },
 ]
