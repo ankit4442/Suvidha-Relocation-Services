@@ -1,5 +1,5 @@
 import { COMPANY, phoneLink } from '../constants.js'
-import logo from "../../assets/logoimage.jpeg";
+import logo from "../../assets/logo2.png";
 
 export default function Footer() {
   const year = new Date().getFullYear()
