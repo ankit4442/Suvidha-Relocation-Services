@@ -1,59 +1,56 @@
-const SERVICES = [
-  {
-    icon: '🏠',
-    title: 'Home Relocation',
-    text: 'Complete household shifting with careful packing of furniture, appliances and fragile items.',
-  },
-  {
-    icon: '🏢',
-    title: 'Office Relocation',
-    text: 'Minimal-downtime corporate moves — workstations, IT equipment and documents handled with care.',
-  },
-  {
-    icon: '📦',
-    title: 'Packing & Unpacking',
-    text: 'Premium packing material and trained packers ensure your goods stay damage-free in transit.',
-  },
-  {
-    icon: '🚚',
-    title: 'Loading & Unloading',
-    text: 'Skilled labour for safe loading and unloading using the right tools and equipment.',
-  },
-  {
-    icon: '🚗',
-    title: 'Car & Bike Transport',
-    text: 'Dedicated carriers to transport your vehicle safely to any destination across India.',
-  },
-  {
-    icon: '🏬',
-    title: 'Warehousing & Storage',
-    text: 'Secure, clean and monitored storage facilities for short and long-term needs.',
-  },
-]
+import { COMPANY, phoneLink } from '../constants.js'
+import logo from "../../assets/logo2.png";
 
-export default function Services() {
+export default function Footer() {
+  const year = new Date().getFullYear()
+
   return (
-    <section id="services" className="section services">
-      <div className="container">
-        <div className="section__head">
-          <span className="section__eyebrow">What We Do</span>
-          <h2 className="section__title">Our Relocation Services</h2>
-          <p className="section__lead">
-            End-to-end moving solutions tailored to your needs, delivered with
-            professionalism and care.
-          </p>
+    <footer className="footer">
+      <div className="container footer__grid">
+        <div className="footer__brand">
+          <div className="footer__brand-top">
+            <img src={logo} alt={`${COMPANY.name} logo`} />
+            <span>
+              <strong>Suvidha</strong>
+              <small>Relocation Services</small>
+            </span>
+          </div>
+          <p>
+  Suvidha Relocation Services provides professional home shifting,
+  office relocation, packing and moving, car transportation and
+  warehousing services across India with safe and timely delivery.
+</p>
         </div>
 
-        <div className="services__grid">
-          {SERVICES.map((s) => (
-            <article key={s.title} className="service-card">
-              <div className="service-card__icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-            </article>
-          ))}
+        <div className="footer__col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div className="footer__col">
+          <h4>Our Services</h4>
+          <a href="#services">Home Relocation</a>
+          <a href="#services">Office Relocation</a>
+          <a href="#services">Car &amp; Bike Transport</a>
+          <a href="#services">Warehousing</a>
+        </div>
+
+        <div className="footer__col">
+          <h4>Contact</h4>
+          <a href={`tel:${phoneLink(COMPANY.phonePrimary)}`}>{COMPANY.phonePrimary}</a>
+          <a href={`tel:${phoneLink(COMPANY.phoneSecondary)}`}>{COMPANY.phoneSecondary}</a>
+          <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>
         </div>
       </div>
-    </section>
+
+      <div className="footer__bottom">
+        <div className="container">
+          © {year} {COMPANY.name}. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
   )
 }
