@@ -1,1 +1,4 @@
-
+User-agent: *
+Allow: /
+ 
+Sitemap: https://suvidha-relocation-services.vercel.app/sitemap.xml
