@@ -1,56 +1,67 @@
-import { COMPANY, phoneLink } from '../constants.js'
-import logo from "../../assets/logo2.png";
+const SERVICES = [
+  {
+    icon: '🏠',
+    title: 'Home Relocation',
+    text: 'Professional home shifting and household relocation services with safe packing of furniture, appliances and fragile items.',
+  },
+  {
+    icon: '🏢',
+    title: 'Office Relocation',
+    text: 'Professional office relocation and corporate shifting services with safe handling of workstations, IT equipment and important documents.',
+  },
+  {
+    icon: '📦',
+    title: 'Packing & Unpacking',
+    text: 'Premium packing materials and trained packers ensure your belongings remain safe and damage-free during transportation.',
+  },
+  {
+    icon: '🚚',
+    title: 'Loading & Unloading',
+    text: 'Skilled professionals provide secure loading and unloading services using modern tools and equipment.',
+  },
+  {
+    icon: '🚗',
+    title: 'Car & Bike Transport',
+    text: 'Safe and reliable car and bike transportation services to destinations across India with dedicated vehicle carriers.',
+  },
+  {
+    icon: '🏬',
+    title: 'Warehousing & Storage',
+    text: 'Secure, clean and monitored warehousing and storage facilities for both short-term and long-term requirements.',
+  },
+]
 
-export default function Footer() {
-  const year = new Date().getFullYear()
-
+export default function Services() {
   return (
-    <footer className="footer">
-      <div className="container footer__grid">
-        <div className="footer__brand">
-          <div className="footer__brand-top">
-            <img src={logo} alt={`${COMPANY.name} logo`} />
-            <span>
-              <strong>Suvidha</strong>
-              <small>Relocation Services</small>
-            </span>
-          </div>
-          <p>
-  Suvidha Relocation Services provides professional home shifting,
-  office relocation, packing and moving, car transportation and
-  warehousing services across India with safe and timely delivery.
-</p>
+    <section id="services" className="section services">
+      <div className="container">
+        <div className="section__head">
+          <span className="section__eyebrow">What We Do</span>
+
+          <h2 className="section__title">
+            Packers and Movers Services Across India
+          </h2>
+
+          <p className="section__lead">
+            We provide home shifting, office relocation, packing and unpacking,
+            loading and unloading, car transportation and warehousing services
+            across India with complete safety, reliability and customer
+            satisfaction.
+          </p>
         </div>
 
-        <div className="footer__col">
-          <h4>Quick Links</h4>
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <div className="services__grid">
+          {SERVICES.map((service) => (
+            <article key={service.title} className="service-card">
+              <div className="service-card__icon">{service.icon}</div>
 
-        <div className="footer__col">
-          <h4>Our Services</h4>
-          <a href="#services">Home Relocation</a>
-          <a href="#services">Office Relocation</a>
-          <a href="#services">Car &amp; Bike Transport</a>
-          <a href="#services">Warehousing</a>
-        </div>
+              <h3>{service.title}</h3>
 
-        <div className="footer__col">
-          <h4>Contact</h4>
-          <a href={`tel:${phoneLink(COMPANY.phonePrimary)}`}>{COMPANY.phonePrimary}</a>
-          <a href={`tel:${phoneLink(COMPANY.phoneSecondary)}`}>{COMPANY.phoneSecondary}</a>
-          <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>
+              <p>{service.text}</p>
+            </article>
+          ))}
         </div>
       </div>
-
-      <div className="footer__bottom">
-        <div className="container">
-          © {year} {COMPANY.name}. All Rights Reserved.
-        </div>
-      </div>
-    </footer>
+    </section>
   )
 }
