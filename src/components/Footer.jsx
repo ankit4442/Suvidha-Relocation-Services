@@ -16,9 +16,10 @@ export default function Footer() {
             </span>
           </div>
           <p>
-            Your trusted partner for safe, affordable and on-time packing and
-            moving services across India.
-          </p>
+  Suvidha Relocation Services provides professional home shifting,
+  office relocation, packing and moving, car transportation and
+  warehousing services across India with safe and timely delivery.
+</p>
         </div>
 
         <div className="footer__col">
