@@ -35,11 +35,15 @@ export default function Contact() {
       <div className="container contact__inner">
         <div className="contact__info">
           <span className="section__eyebrow">Get In Touch</span>
-          <h2 className="section__title">Request Your Free Quote</h2>
-          <p className="section__lead">
-            Planning a move? Reach out and our team will get back to you with a
-            transparent quote within 30 minutes.
-          </p>
+          <h2 className="section__title">
+  Contact India's Trusted Packers and Movers
+</h2>
+
+<p className="section__lead">
+  Looking for reliable home shifting, office relocation, packing and moving,
+  car transportation or warehousing services? Contact Suvidha Relocation
+  Services today and get a free moving quote within 30 minutes.
+</p>
 
           <ul className="contact__list">
             <li>
