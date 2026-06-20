@@ -46,6 +46,19 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 }
+ .form__group {
+  width: 100%;
+}
+ 
+.error-text {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 6px;
+}
+ 
+.input-error {
+  border-color: #dc2626 !important;
+}
 
 .section {
   padding: 80px 0;
@@ -849,4 +862,7 @@ a {
   .hero__card {
     padding: 24px;
   }
+ 
 }
+
+
