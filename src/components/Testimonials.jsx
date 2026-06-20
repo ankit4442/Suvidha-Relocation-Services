@@ -1,7 +1,7 @@
 const REVIEWS = [
   {
-    name: 'Rahul Sharma',
-    place: 'Chandigarh',
+    name: 'Shiv Kumar',
+    place: 'Abohar',
     text: 'Excellent service! The team packed everything so carefully and delivered on time. Not a single item was damaged.',
   },
   {
